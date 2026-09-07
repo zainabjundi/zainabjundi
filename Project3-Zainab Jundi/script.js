@@ -91,6 +91,22 @@ let cart = JSON.parse(localStorage.getItem("coretechCart")) || [];
 let users = JSON.parse(localStorage.getItem("coretechUsers")) || [];
 let currentUser = JSON.parse(localStorage.getItem("coretechCurrentUser")) || null;
 
+/* seed the demo account shown in the login modal, if it doesn't exist yet*/
+
+const demoAccountExists = users.some(function(user) {
+    return user.email === "admin@gmail.com";
+});
+
+if (!demoAccountExists) {
+    users.push({
+        name: "Admin",
+        email: "admin@gmail.com",
+        password: "123456"
+    });
+
+    localStorage.setItem("coretechUsers", JSON.stringify(users));
+}
+
 let selectedCategory = "all";
 let currentProducts = [...products];
 
