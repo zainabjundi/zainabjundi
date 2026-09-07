@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CORETECH </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+<header>
+    <nav class="navbar">
+        <div class="logo">
+        <i class="fa-solid fa-bolt"></i>
+
+        <span>CoreTech</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li> <a href="#products">Products</a></li>
+            <li><a href="#deals">Deals</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="loginBtn" class="nav-btn">
+                <i class="fa-solid fa-user"></i>
+                Login
+            </button>
+        <span id="usernameDisplay" class="username"></span>
+
+        <button id="logoutBtn" class="nav-btn hidden">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+        <button id="cartBtn" class="nav-btn cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+            <span id="cartCount">0</span>
+        </button>
+
+        <button id="darkBtn" class="icon-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button id="menuBtn" class="icon-btn menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+     </nav>
+</header>
+
+<main>
+   <section id="home" class="hero">
+    <div class="hero-content">
+    <p class="hero-small-title">
+        <i class="fa-solid fa-bolt"></i>
+        SMART TECHNOLOGY, BETTER LIFE
+        </p>
+
+   <h1>Discover Your
+    <span>Future in Tech</span>
+</h1>
+    <p class="hero-description">
+    Explore the latest laptops, smartphones, gaming gear,
+    and smart devices — all at great prices and trusted quality.
+</p>
+
+    <div class="hero-buttons">
+        <a href="#products" class="primary-btn">
+            Shop Now
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#deals" class="secondary-btn">
+            View Deals
+            <i class="fa-solid fa-tag"></i>
+        </a>
+    </div>
+</div>
+
+<div class="hero-product">
+    <div class="hero-product-icon">
+        <i class="fa-solid fa-laptop"></i>
+    </div>
+<p>Best Seller</p>
+
+<h3>ProBook Z</h3>
+   <div class="hero-raating">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i> 
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+   </div>
+
+   <strong>$899</strong>
+     </div>
+</section>
+
+<section class="services">
+    <div class="section-title">
+        <p>WHY CHOOSE US</p>
+        <h2>Our Services </h2>
+    </div>
+
+    <div class="services-container">
+        <div class="service-card">
+
+            <div class="services-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
+
+<h3>Fast Shipping</h3>
+
+<p>
+    Receive your orders quickly with safe
+    and reliable delivery to your doorstep.
+</p>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
+    <h3>Product Guarantee</h3>
+
+    <p>
+        Shop with confidence with reliable
+        warranty coverage on selected items.
+    </p>
+</div>
+
+<h3>Secure Checkout</h3>
+
+<p>
+    Complete your purchase safely with
+    protected and secure payment processing.
+</p>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">
+        <i class="fa-solid fa-headset"></i>
+    </div>
+
+    <h3>Expert Assistance</h3>
+
+    <p>
+        Our friendly support team is ready
+        to assist you with any questions.
+    </p>
+</div>
+</div>
+</section>
+
+
+<section id="categories" class="categories">
+    <div class="section-title">
+        <p>EXPLORE TECHNOLOGY</p>
+    <h2> Shop By Category </h2>
+</div>
+
+<div class="category-buttons">
+    <button class="category-btn active" data-category="all">
+        <i class="fa-solid fa-layer-group"></i>
+        All
+    </button>
+
+    <button class="category-btn" data-category="laptops">
+        <i class="fa-solid fa-laptop"></i>
+        Laptops
+    </button>
+
+     <button class="category-btn" data-category="phones">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        Phones
+    </button>
+
+     <button class="category-btn" data-category="accessories">
+        <i class="fa-solid fa-headphones"></i>
+        Accessories
+    </button>
+
+     <button class="category-btn" data-category="gaming">
+        <i class="fa-solid fa-gamepad"></i>
+        Gaming
+      </button>
+    </div>
+</section>
+
+<section id="products" class="products-section">
+    <div class="section-title">
+        <p>OUR COLLECTION</p>
+        <h2>Featured Products</h2>
+
+        <p class="section-description">
+            Find the perfect technology for your 
+            work, entertainment, and everyday life.
+        </p>
+    </div>
+
+    <div class="product-controls">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input 
+            type="text"
+            id="searchInput"
+            placeholder="Search for products...">
+        </div>
+
+        <div class="sort-box">
+            <label for="sortSelect">
+                Sort:
+            </label>
+
+            <select id="sortSelect"> 
+                <option value="default">
+                    Default Sort
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low 
+                </option>
+
+                <option value="name">
+                    Name A-Z
+                </option>
+         </select>
+     </div>
+ </div>
+
+
+<div id="productsContainer" class="products-container">
+</div>
+</section>
+
+<section id="deals" class="deals-section">
+    <div class="deals-content">
+        <p class="deal-small">
+            <i class="fa-solid fa-fire"></i>
+            LIMITED TIME OFFER
+        </p>
+
+        <h2>
+            Save Up To 
+            <span>30%</span>
+            On Selected Electronics
+        </h2>
+
+        <p>
+            Upgrade your setup today and enjoy
+            special prices on selected technology.
+        </p>
+
+        <a href="#products" class="primary-btn">
+            Shop Deals
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="countdown-container">
+        <h3>Offer Ends In</h3>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <strong id="days">00</strong>
+                <span>Days</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="hours">00</strong>
+                <span>Hours</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="minutes">00</strong>
+                <span>Minutes</span>
+            </div>
+
+    <div class="time-box">
+        <strong id="seconds">00</strong>
+        <span>Seconds</span>
+       </div>
+    </div>
+ </div>
+</section>
+
+
+<section id="about" class="about-section">
+    <div class="about-content">
+        <p class="section-label">
+            ABOUT CORETECH
+        </p>
+
+        <h2>
+            Technology That 
+            <span>Moves With You</span>
+        </h2>
+
+    <p>
+    CoreTech is an electronics store built for
+    technology enthusiasts. We provide quality products,
+    competitive prices, and a smooth shopping experience
+    with trusted customer support.
+</p>
+
+    <p>
+    Discover powerful laptops, smartphones, gaming gear,
+    and essential accessories, all in one place to make
+    your technology shopping simple and convenient.
+</p>
+</div>
+
+<div class="stats-container">
+    <div class="stat-box">
+        <i class="fa-solid fa-users"></i>
+        <h3>10K+</h3>
+        <p>Satisfied Customers</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fa-solid fa-box"></i>
+        <h3>500+</h3>
+        <p>Tech Products</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fa-solid fa-clock"></i>
+        <h3>7 Days</h3>
+        <p>Customer Support</p>
+    </div>
+</div>
+</section>
+
+<section class="reviews-section">
+    <div class="section-title">
+        <p>WHAT OUR CUSTOMERS SAY</p>
+
+        <h2>Customer Reviews</h2>
+    </div>
+
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i> 
+                <i class="fa-solid fa-star"></i>
+            </div>
+           <p>
+    "I ordered a laptop from CoreTech and I was
+    impressed with the quality and service.
+    Everything arrived quickly and safely!"
+</p>
+
+<h4>Emma J.</h4>
+            <span>Verified Customer</span>
+        </div>
+
+<div class="review-card">
+    <div class="review-stars">
+
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+    </div>
+
+    <p>
+         "Amazing products and great prices! 
+         The gaming accessories are high quality, 
+         and the website makes shopping really easy."
+    </p>
+
+    <h4>Daniel S.</h4>
+    <span>Verified Customer</span>
+</div>
+
+<div class="review-card">
+    <div class="review-stars">
+
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+    </div>
+
+    <p>
+        "Excellent shopping experience! 
+        Everything was clear, simple, and easy to find. 
+        I will definitely shop here again."
+    </p>
+
+    <h4>James M.</h4>
+    <span>Verified Customer</span>
+   </div> 
+ </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="section-title">
+        <p>GET IN TOUCH</p>
+        <h2>Contact Us</h2>
+        <p class="section-description">
+            Have a question? Send us a message
+            and our team will get back to you.
+        </p>
+    </div>
+
+    <form id="contactForm" class="contact-form">
+        <div class="form-group">
+            <label for="contactName">
+                Name
+            </label>
+
+            <input
+            type="text"
+            id="contactName"
+            placeholder="Enter your name">
+
+            <form id="form-group">
+                <label for="contactEmail">
+                    Email
+                </label>
+
+                <input
+                type="email"
+                id="contactEmail"
+                placeholder="Enter your email">
+
+                <div class="form-group">
+                    <label for="contactMessage">
+                        Message
+                    </label>
+
+                    <textarea 
+                    id="contactMessage"
+                    rows="6"
+                    placeholder="Write your message...">
+                </textarea>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+            </button>
+
+            <p id="contactResult" class="form-result"></p>
+        </form>
+    </section>
+
+
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+               <h2>Join the CoreTech Community</h2>
+<p>
+    Get the latest tech updates, new arrivals,
+    exclusive offers, and special deals delivered to you.
+</p>
+            </div>
+        </div>
+
+        <form id="newsletterForm" class="newsletter-form">
+            <input 
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email address">
+
+            <button type="submit" class="primary-btn">
+                Subscribe
+                <i class="fa-solid fa-arrow-right"></i>
+           </button>
+
+           <p id="newsletterResult"></p>
+        </form>
+    </section>
+</main>
+
+<aside id="cartSidebar" class="card-sidebar">
+    <div class="cart-header">
+        <h2>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Your Cart
+        </h2>
+        <button id="closeCart" class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <strong id="cartTotal">
+                $0.00
+            </strong>
+        </div>
+
+        <button id="clearCartBtn" class="clear-cart-btn">
+            <i class="fa-solid fa-trash"></i>
+            Clear Cart     
+        </button>
+      
+     <button id="checkoutBtn" class="checkout-btn">
+        <i class="fa-solid fa-credit-card"></i>
+        Checkout
+     </button>
+    </div>
+ </aside>
+
+   <div id="productModal" class="modal">
+    <div class="modal-content product-modal-content">
+        <button id="closeProductModal" class="modal-close">
+            <i class="fa-solid fa-xmark"></i>
+       </button>
+
+       <div id="productDetails">
+        <!-- created in javascript-->
+       </div>
+    </div>
+</div>
+
+
+<!--login/signup-->
+
+ <div id="authModal" class="modal">
+    <div class="modal-content auth-modal">
+        <button id="closeAuthModal" class="modal-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="auth-tabs">
+            <button id="loginTab" class="auth-tab active">
+                Login
+            </button>
+
+            <button id="signupTab" class="auth-tab">
+                Sign Up
+            </button>
+         </div>
+
+         <!--login form-->
+         <form id="loginForm" class="auth-form">
+            <h2>Welcome Back</h2>
+            <p> Login to your CORETECH account.</p>
+
+            <div class="form-group">
+                <label for="loginEmail">
+                    Email
+                </label>
+                <input 
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">
+                    Password
+                </label>
+                <input 
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="primary-btn auth-submit">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </button>
+
+            <p id="loginMessage" class="form-result"></p>
+            <p class="demo-account">
+                Demo Account:
+                <br>
+                Email: admin@gmail.com
+                <br>
+                Password: 123456
+            </p>
+        </form>
+
+        <!--Sign up form-->
+
+        <form id="signupForm" class="auth-form hidden">
+            <h2>Create Account</h2>
+            <p>
+                Create your CORETECH account.
+            </p>
+
+            <div class="form-group">
+                <label for="signupName">
+                    Full Name
+                </label>
+
+                <input 
+                type="text"
+                id="signupName"
+                placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="signupEmail">
+                    Email
+                </label>
+                <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="signupPassword">
+                    Password
+                </label>
+                <input
+                type="password"
+                id="signupPassword"
+                placeholder="At least 6 characters">
+            </div>
+
+            <button type="submit" class="primary-btn auth-submit">
+                <i class=" fa-solid fa-user-plus"></i>
+                Create Account
+            </button>
+
+            <p id="signupMessage" class="form-result"></p>
+        </form>
+     </div>
+ </div>
+
+ <footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <i class="fa-solid fa-bolt"></i>
+            <span>CORE TECH</span>
+        </div>
+        <p>
+            Your trusted destination for modern electronics,
+            quality technology, and affordable prices.
+        </p>
+    </div>
+    
+    <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#deals">Deals</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-column">
+        <h3>Categories</h3>
+        <a href="#products">Laptops</a>
+        <a href="#products">Phones</a>
+        <a href="#products">Accessories</a>
+        <a href="#products">Gaming</a>
+    </div>
+
+    <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+             <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+             <a href="#" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+             <a href="#" aria-label="Youtube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+   <div class="footer-bottom">
+    <p>
+        &copy; 2026 CORETECH, All Rights Reserved.
+     </p>
+    </div>
+</footer>
+
+<!--javascript file-->
+<script src="script.js"></script>
+ 
+</body>
+</html>
