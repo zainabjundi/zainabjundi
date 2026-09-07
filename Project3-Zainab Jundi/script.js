@@ -770,29 +770,29 @@ if (logoutButton) {
 function updateUserInterface() {
     if (currentUser) {
         if (loginButton) {
-            loginButton.style.display = "none";
+           loginButton.classList.add("hidden");
         }
 
         if (logoutButton) {
-            logoutButton.style.display = "inline-block";
+            logoutButton.classList.remove("hidden");
         }
 
         if (usernameDisplay) {
             usernameDisplay.textContent =
                 "Welcome, " + currentUser.name;
-            usernameDisplay.style.display = "inline-block";
+            usernameDisplay.classList.remove("hidden");
         }
     } else {
         if (loginButton) {
-            loginButton.style.display = "inline-block";
+            loginButton.classList.remove("hidden");
         }
 
         if (logoutButton) {
-            logoutButton.style.display = "none";
+           logoutButton.classList.add("hidden");
         }
 
         if (usernameDisplay) {
-            usernameDisplay.style.display = "none";
+            usernameDisplay.classList.add("hidden");
         }
     }
 }
